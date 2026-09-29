@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Figtree', sans-serif;
+  color: #486679;
+  background: #f6f7f8;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; background: #f6f7f8; }
+button, input, select, textarea { font: inherit; }
+button { cursor: pointer; }
+
+@layer components {
+  .card { @apply rounded-2xl border border-[#e4e8eb] bg-white shadow-[0_12px_35px_rgba(72,102,121,0.07)]; }
+  .field { @apply w-full rounded-xl border border-[#d8e0e5] bg-white px-4 py-3 text-[#486679] outline-none transition placeholder:text-[#9baab3] focus:border-[#7598AF] focus:ring-4 focus:ring-[#7598AF]/15; }
+  .primary-button { @apply inline-flex items-center justify-center gap-2 rounded-xl bg-[#7598AF] px-5 py-3 font-semibold text-white transition hover:bg-[#63899f] active:scale-[.98] disabled:cursor-not-allowed disabled:opacity-50; }
+  .secondary-button { @apply inline-flex items-center justify-center gap-2 rounded-xl border border-[#d5dfe4] bg-white px-5 py-3 font-semibold text-[#486679] transition hover:border-[#7598AF] hover:bg-[#f2f6f8] active:scale-[.98]; }
+  .eyebrow { @apply text-xs font-bold uppercase tracking-[0.18em] text-[#7598AF]; }
+}
